@@ -14,14 +14,20 @@ body {
 header {
     grid-area: header;
     background-color: lightblue;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
-
+header h1 {
+    margin: 0;
+}
+header p {
+    margin-bottom: 0;
+}
 nav {
     grid-area: nav;
     background-color: white;
     padding: 10px;
+    text-align: center;
 }
 
 nav ul {
@@ -35,7 +41,8 @@ nav ul {
 nav a {
     text-decoration: none;
     color: darkslategray;
-    padding: 10px;
+    padding: 10px 15px;
+    display:block;
 }
 nav a:hover {
     background-color: lightblue;
@@ -49,11 +56,16 @@ main {
 section {
     background-color: white;
     margin-bottom: 20px;
-    padding 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+section h2 {
+    text-align: center;
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
+    border-radius: 10px;
 }
 
 .color-cards {
@@ -80,17 +92,19 @@ footer {
 @media (max-width: 700px) {
     body {
         grid-template-areas:
-            "header"
-            "nav"
-            "main"
-            "footer";
-        gap: 10px;
+            "header header"
+            "nav nav"
+            "main main"
+            "footer footer";
     }
     main {
         padding: 40px;
     }
     section {
         margin-bottom: 30px;
+    }
+    nav ul {
+        gap: 30px;
     }
 }
 
